@@ -25,6 +25,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy rest of app AFTER deps
 COPY . .
 
-EXPOSE 7860
+EXPOSE 8007
 
-CMD ["python", "smartflo_agent.py", "--transport", "twilio"]
+CMD ["python", "smartflo_agent.py", "--transport", "twilio", "--host", "0.0.0.0", "--port", "8007"]
